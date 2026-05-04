@@ -399,6 +399,11 @@
 
 <script>
   const numeroGanador = null;
+  if (!numeroGanador) {
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".rifa-info").style.display = "none";
+  });
+}
 
   const numerosRifa = [
     { id: "00", nombre: null, direccion: null, whatsapp: null },
@@ -511,8 +516,6 @@
     { id: "98", nombre: null, direccion: null, whatsapp: null },
     { id: "99", nombre: null, direccion: null, whatsapp: null }
   ];
-
-  let numeroSeleccionado = null;
 
 function mostrarPopupRifa(mensaje, mostrarConfirmacion) {
   document.getElementById("popupMensaje").textContent = mensaje;
